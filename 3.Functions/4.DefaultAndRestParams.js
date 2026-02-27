@@ -8,3 +8,8 @@ function greet(name="Guest"){
 greet(); //guest
 greet("Karthik") //karthik
 
+//The Rest Parameter allows a function to accept any number of arguments and store them into one array.
+function add(...params){
+    return params.reduce((accu, curr) => accu+curr, 0);
+}
+console.log(`its a rest params ${add(1,2,3,4,5,6,7,8,)}`);
