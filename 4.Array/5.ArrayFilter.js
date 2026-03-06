@@ -13,3 +13,10 @@ const users = [
 ];
 const filtered = users.filter((num)  => num.id == 1)
 console.log(filtered)
+
+//find method suppose to find only one element
+const numb = [1, 20, 9,];
+const res = num.find((ele) => {
+   return ele > 2;
+})
+console.log(res)
