@@ -2,5 +2,7 @@ const students = [];
 
 function addStudents(name, mark){
     mark = Number(mark);
-    score = score ?? 0;
+    mark = mark ?? 0;
+    name = name.trim().toUpperCase();
+    students.push({name, score})
 }
