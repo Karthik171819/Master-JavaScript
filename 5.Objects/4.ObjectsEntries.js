@@ -1,3 +1,4 @@
+//In JavaScript, entries() is a method used to get key-value pairs from arrays or objects.
 const obj = {
     name: "lok",
     age: 40,
