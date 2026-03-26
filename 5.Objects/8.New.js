@@ -1,5 +1,5 @@
 function greet(name){
     this.Name = name
 }
-const wlcm = greet("hi");
+const wlcm = new greet("hi");
 console.log(wlcm)
