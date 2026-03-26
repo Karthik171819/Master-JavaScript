@@ -24,6 +24,8 @@ function Ch(name){
 function stunter(name){
     this.name = name
 }
+//create a reference for the prototype
+stunter.prototype = new Ch()
 
-const fightr = new Ch("Mangekyu")
-fightr.attack()
+const s1 = new stunter("Itachi")
+s1.attack();
