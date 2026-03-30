@@ -15,4 +15,6 @@ const person ={
     }
 };
 
-person.fullName;
+person.fullName; //here accesing the fullName property will call the getter and return the full name
+
+person.fullName = "Karthik Kumar"; //here setting the fullName property will call the setter and update the firstName and lastName properties
