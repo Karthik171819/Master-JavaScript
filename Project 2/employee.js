@@ -12,7 +12,7 @@ const employeeDB = {};
 function addEmployee(id, name, department, salary) {
   const newEmployee = new Employees(id, name, department, salary);
   employeeDB[id] = newEmployee;
-  console.log(`Employee  with ID${id} added successfully.`);
+  console.log(`Employee  with ID ${id} added successfully.`);
 }
 
 //function to get all employees object.values
@@ -48,9 +48,28 @@ function updateEmployee(id, updateDetails){
 function freezeEmployee(id){
   if(employeeDB[id]){
     Object.freeze(employeeDB[id]);
+    console.log("Employee data freezed")
+  }
+  else{
     console.log(`Employee with ID ${id} has been frozen.`);
   }
 }
 
 //function to seal employee data
-function 
+function sealEmployee(id){
+  if(employeeDB[id]){
+    Object.seal(employeeDB[id]);
+    console.log("Employee data sealed")
+  }
+  else{
+    console.log(`Employee with ID ${id} has been sealed.`);
+  }
+}
+
+//adding employeeinto addemployee function
+addEmployee(1, "Lokendra", "IT", 50000);
+addEmployee(2, "Anand", "HR", 45000);
+addEmployee(3, "Ravi", "Finance", 55000);
+
+//get all employee details
+getAllEmployees();
