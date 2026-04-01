@@ -72,4 +72,9 @@ addEmployee(2, "Anand", "HR", 45000);
 addEmployee(3, "Ravi", "Finance", 55000);
 
 //get all employee details
+console.log("\n")
 getAllEmployees();
+
+//get employee details by ID
+console.log("\n")
+console.log(getEmployeeDetails(2));
