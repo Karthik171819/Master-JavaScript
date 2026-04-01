@@ -80,3 +80,29 @@ console.log("\n")
 console.log(" View Employee Details");
 console.log(getEmployeeDetails(2));
 console.log(getEmployeeDetails(7));
+
+//update employee details by ID
+console.log("\n")
+console.log("Update Employee Details");
+updateEmployee(2, { salary: 48000 });
+console.log("After update");
+getAllEmployees();
+
+//freezing the employee data
+console.log("\n")
+console.log("Freezing Employee Data");
+freezeEmployee(2);
+
+//attempting to update frozen employee data
+console.log("\n")
+employeeDB[2].salary = 70000; // This will not update the salary as the object is frozen
+console.log("After attempting to update frozen employee data");
+getAllEmployees();
+
+//sealing the employee data
+console.log("\n")
+console.log("Sealing Employee Data");
+sealEmployee(3);
+employeeDB[3].department = "Marketing"; // This will update the department as the object is sealed but not frozen
+console.log("After updating sealed employee data");
+getAllEmployees();
