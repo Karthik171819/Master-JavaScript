@@ -33,3 +33,24 @@ function getEmployeeDetails(id) {
   }
   return `Employee with ID ${id} not found.`;
 }
+
+//function to update employee details by ID
+function updateEmployee(id, updateDetails){
+  if(employeeDB[id]){
+    Object.assign(employeeDB[id], updateDetails);
+  }
+  else {
+    console.log(`Employee with ID ${id} not found.`);
+  }
+}
+
+//function to freeze the employee data
+function freezeEmployee(id){
+  if(employeeDB[id]){
+    Object.freeze(employeeDB[id]);
+    console.log(`Employee with ID ${id} has been frozen.`);
+  }
+}
+
+//function to seal employee data
+function 
