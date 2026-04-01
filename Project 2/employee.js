@@ -77,4 +77,6 @@ getAllEmployees();
 
 //get employee details by ID
 console.log("\n")
+console.log(" View Employee Details");
 console.log(getEmployeeDetails(2));
+console.log(getEmployeeDetails(7));
