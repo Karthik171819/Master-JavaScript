@@ -106,3 +106,6 @@ sealEmployee(3);
 employeeDB[3].department = "Marketing"; // This will update the department as the object is sealed but not frozen
 console.log("After updating sealed employee data");
 getAllEmployees();
+
+
+
