@@ -1,7 +1,8 @@
 //promise 
 const promise = new Promise((res, rej) => {
     setTimeout(() => {
-        res("Promise resolved")
+        console.log()
+        res()
     }, 3000)
 })
 console.log(promise) //pending
