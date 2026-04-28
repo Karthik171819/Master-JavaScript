@@ -3,8 +3,8 @@ return new Promise((res, rej) => {
   let users=[];
   setTimeout(() => {
       users = [
-    { name: "Karthik", loc: "banglore" },
-    { name: "bob", loc: "chennai" },
+    { username: "Karthik", loc: "banglore" },
+    { username: "bob", loc: "chennai" },
   ];
   res(users)
   }, 2000);
@@ -12,7 +12,16 @@ return new Promise((res, rej) => {
 })
 
 }
-let promise = getUser()
-promise.then((users) => {
-  console.log(users)
-})
+// let promise = getUser()
+// promise.then((users) => {
+//   console.log(users)
+// })
+
+function findUser(username){
+  getUser().then((users) => {
+    const user = users.find((user) => user.username === username);
+    console.log(user)
+  })
+}
+
+console.log(findUser("Karthik"))
