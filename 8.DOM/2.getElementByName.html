@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p name="nameId">Hi karthik come on you can...,</p>
+    <p name="nameId">Just trust the process</p>
+    <script>
+        //getElementByname
+        const res = document.getElementsByName('nameId');
+        console.log(res);
+        for (let i=0; i<res.length; i++){
+            const element = res[i];
+            element.innerText = 'Hello karthik';
+        }
+    </script>
+</body>
+</html>
