@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hi Good Morning</p>
+    <p>Hi Good Night</p>
+    <h1>Namaskaram</h1>
+    <button>Click</button>
+    
+    <script>
+        const el = document.getElementsByTagName('p');
+        for(let i=0; i<el.length; i++){
+            const result =el[i];
+            result.textContent = "new Content or change content for paragraght ", i+1;
+        }
+    </script>
+
+</body>
+</html>
