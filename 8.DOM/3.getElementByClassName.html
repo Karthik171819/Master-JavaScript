@@ -17,7 +17,12 @@
   
 <script>
     const res = document.getElementsByClassName('classname');
-    console.log(res);
+    //console.log(res);
+    for (let i=0; i<res.length; i++){
+        const result = res[i];
+        result.textContent = "New zContent previous was changed";
+
+    }
 </script>
 </body>
 </html>
