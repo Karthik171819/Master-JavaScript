@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "AttributeDiv" data = "This is attribute data"></div>
+    <script>
+        const element = document.getElementById('AttributeDiv');
+        const el = element.getAttribute('data');
+        el.textContent = "This is new content for attribute data";
+        console.log(el)
+    </script>
+</body>
+</html>
