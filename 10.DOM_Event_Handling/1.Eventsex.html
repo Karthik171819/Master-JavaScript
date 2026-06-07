@@ -11,10 +11,18 @@
 
     <!-- formal way to call -->
      <button onclick="showAlert()">Click Through Function</button>
+
+     <!-- By DOM Method -->
+      <button id="btn">Button DOM</button>
      <script>
         function showAlert(){
             alert('Clicked through JS Function')
         }
+        // DOM Method
+        const btnEL = document.getElementById('btn');
+        btnEL.addEventListener('click', function(event){
+            alert('Clicked through DOM Method ' +event.type)
+        })
      </script>
 </body>
 </html>
