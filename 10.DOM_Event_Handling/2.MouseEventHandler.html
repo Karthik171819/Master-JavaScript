@@ -1,0 +1,23 @@
+<!-- To change the text content by clicking btn -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="Text">Hi Master welcome back!!</p>
+    <button id="btn">Click Me!!</button>
+    <script>
+        const btnEl =document.getElementById('Text');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', mouseEventHandler)
+            function mouseEventHandler(){
+              btnEl.textContent = 'Have a nice day!!'  
+        }
+
+    </script>
+</body>
+</html>
