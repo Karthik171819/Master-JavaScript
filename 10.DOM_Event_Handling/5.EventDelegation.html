@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <script>
+        // Event Delegation: Attach a single event listener to a parent element
+        const list = document.getElementById('list');
+
+        list.addEventListener('click', function(event) {
+            // Check if the clicked element is an <li>
+            if (event.target && event.target.nodeName === 'LI') {
+                console.log('Clicked on:', event.target.textContent);
+            }
+        });
+    </script>
+</body>
+</html>
