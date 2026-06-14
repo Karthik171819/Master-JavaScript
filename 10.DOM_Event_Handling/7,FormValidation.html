@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <h2>Form Validation</h2>
+    <form id="loginForm">
+      <input type="text" placeholder="Username" id="username" required />
+      <input type="email" placeholder="Email" id="email" required />
+      <input type="password" placeholder="Password" id="password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <script>
+      //collect form data
+      const form = document.getElementById("loginForm");
+      form.addEventListener("submit", (e) => {
+        const username = document.getElementById("username").value;
+        const email = document.getElementById("email").value;
+        const psw = document.getElementById("password").value;
+
+        // Simple validation
+        if (!username || !email || !psw) {
+          alert("Please fill in all fields");
+          e.preventDefault(); // Prevent form submission
+        }
+
+        if (psw.length < 6) {
+          alert("Password must be at least 6 characters long");
+          e.preventDefault(); // Prevent form submission
+        }
+
+        if (!email.includes("@")) {
+          alert("Please enter a valid email address");
+          e.preventDefault(); // Prevent form submission
+        }
+      });
+    </script>
+  </body>
+</html>
